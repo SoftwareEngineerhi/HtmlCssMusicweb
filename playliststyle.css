@@ -1,0 +1,741 @@
+/* ==============================================
+style for Playlist.html using this playliststyle.css file
+=============================================== */
+:root {
+  --background-image: url("media/background_image/background.png");
+  --jumbotron-color: #090e0a;
+  --playlist-items-background-color: black;
+  --playlist-items-background-color-on-hover: #2e3249;
+}
+
+body {
+  background-image: var(--background-image);
+  margin: 0px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: white;
+}
+/*==================================
+as per question use innovative theme hence add theme
+=================================== */
+@keyframes radialback {
+  0% {
+    transform: translateX(-25%);
+  }
+  100% {
+    transform: translateX(25%);
+  }
+}
+
+.bg {
+  animation: radialback 20s ease-in-out infinite alternate;
+  background-image: conic-gradient(
+    green,
+    purple,
+    rgb(212, 199, 11),
+    rgb(22, 3, 73)
+  );
+  bottom: 0;
+  left: -50%;
+  opacity: 0.9;
+  position: fixed;
+  right: -50%;
+  top: 0;
+  z-index: -1;
+}
+
+/* anchor tag underline remove and white color use */
+a {
+  text-decoration: none;
+  color: white;
+}
+/* set margine 0 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+}
+/* ======================================
+top navigation bar create 
+=========================================  */
+.navigation-bar {
+  height: auto;
+  width: auto;
+  background-image: linear-gradient(180deg, black, rgba(0, 0, 0, 0));
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+/* ================================
+apply display inline for all navigation bar
+====================================*/
+.navigation-bar > div {
+  display: inline-block;
+}
+/* ================================
+animation for the website logo
+=================================== */
+@keyframes musiclogoa {
+  75% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/*=======================
+ website logo image 
+ ==========================*/
+.website-logo img {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  animation-name: musiclogoa;
+  animation-timing-function: ease-in-out;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+/*=====================
+ website title and general description 
+ ==============================*/
+.title-combo > div {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+/* ===================
+favourites text 
+======================*/
+.favs {
+  color: white;
+}
+
+/*=====================
+ search bar 
+ ======================*/
+.search-bar {
+  width: 20%;
+  position: relative;
+}
+/* ================================
+style for input search bar 
+===================================*/
+.search-bar input {
+  width: 100%;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 18px;
+  border: none;
+  padding: 5px;
+  font-weight: 500;
+  text-align: center;
+  transition: all ease-in-out 0.1s;
+}
+/*==========================
+ search icon for input bar 
+ ============================*/
+.search-ico {
+  color: rgba(0, 0, 0, 0.5);
+}
+/*=========================
+ mic icon for input
+ ========================== */
+.mic-ico {
+  color: rgba(0, 0, 0, 0.5);
+}
+/*=======================
+ search icon 
+ =========================*/
+.search-bar > div:nth-child(1) {
+  display: inline-block;
+  position: absolute;
+  width: min-content;
+  left: 5%;
+  top: 10%;
+  transition: all ease-in-out 0.1s;
+}
+/*============================
+ mic icon 
+ ============================*/
+.search-bar > div:nth-child(3) {
+  display: inline-block;
+  position: absolute;
+  width: min-content;
+  right: 0%;
+  top: 10%;
+  transition: all ease-in-out 0.1s;
+}
+/*========================
+ remove input box outline style 
+ ===========================*/
+input:focus {
+  outline: none;
+}
+
+/*============================
+Notification bell image 
+==============================*/
+.notification-bell i {
+  width: 40px;
+  height: 30px;
+}
+/* =====================================
+Profile logo of the user 
+=======================================*/
+.profile-picture img {
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+}
+/* ================================
+End navigation bar
+================================== */
+
+/* ==================================
+Start main section 
+================================= */
+main {
+  width: 100%;
+  padding: 0% 3%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  transition: all ease-in-out 1s;
+}
+/*=============
+aside section
+============== */
+.aside {
+  display: inline-block;
+  overflow: hidden;
+}
+/*========================
+ song name image section 
+ ========================*/
+.section-1 {
+  width: 70%;
+  height: 85vh;
+  overflow: scroll;
+}
+
+/*===================================
+as per Question scroll bar hide now show
+======================================== */
+.section-1::-webkit-scrollbar {
+  display: none;
+}
+
+/* Section2 style */
+.section-2 {
+  width: 28%;
+  height: 85vh;
+  z-index: 2;
+}
+
+/*=========================================
+ jumbotron for main part popular artist coldplay
+ =========================================*/
+.jumbotron {
+  height: 20vw;
+  width: 100%;
+  margin-top: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--jumbotron-color);
+  margin-bottom: 40px;
+  position: relative;
+}
+
+/*=================================
+ Add coldplay image 
+ =================================*/
+.jumbotron-image {
+  height: 20vw;
+  width: 20vw;
+  background-image: linear-gradient(to bottom, transparent, rgba(20, 27, 65, 1)),
+    url("coldplay1.jpg");
+  background-size: cover;
+}
+/*=======================================
+all about singer name description part 
+=========================================*/
+.jumbotron-detail {
+  width: 67%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding-right: 12px;
+}
+/* ===========================
+detail information 
+============================*/
+.descriptive-part,
+.action-part {
+  width: 100%;
+  height: max-content;
+}
+/* ============================
+song name and followers style
+===============================*/
+.song-name-main,
+.followers {
+  display: inline-block;
+  margin-left: 10px;
+}
+/* ==========================
+song name heading properties
+============================== */
+.song-name-main h1 {
+  font-size: 2vw;
+}
+/* ===============
+follower count style
+===================*/
+.followers {
+  position: absolute;
+  right: 10%;
+  top: 5%;
+  background-image: linear-gradient(cyan, purple);
+  height: auto;
+  width: auto;
+}
+
+/* ===========================
+font size for singer name  
+================================*/
+.followers,
+.author {
+  font-size: 1.5vw;
+  margin-left: 10px;
+}
+
+/* =======================
+all detail about coldplay style 
+============================*/
+.desc {
+  font-size: 1vw;
+  margin-left: 13px;
+}
+
+/*=========================
+Follow and Play all button 
+==========================*/
+.action-part p {
+  font-size: 1vw;
+}
+.btns > button {
+  border: 0px;
+  height: 3vw;
+  width: 10vw;
+  color: white;
+  font-size: 1.2vw;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+/*========================
+make style for play all follow button
+ ========================*/
+.btns > button:nth-child(1) {
+  background-image: linear-gradient(rgb(2, 27, 27), rgb(24, 227, 241));
+}
+
+/*===================
+ follow button 
+ ====================*/
+.btns > button:nth-child(2) {
+  background-image: linear-gradient(purple, cyan);
+}
+
+/*============================
+  playlist style
+ =============================*/
+.playlist-item {
+  height: 8vh;
+  box-sizing: border-box;
+  background-color: var(--playlist-items-background-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+/*=========================
+playlist item hovering effects
+============================ */
+.playlist-item:hover {
+  background-color: var(--playlist-items-background-color-on-hover);
+}
+/*================================
+left part of the playlist item 
+=================================*/
+.left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  padding: 0% 1%;
+}
+/*=================================
+ center part of the playlist duration the song 
+ ==================================*/
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: min-content;
+  height: 100%;
+}
+/*======================================
+ right part of the playlist item, which contains icons 
+ ===========================================*/
+.right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 100%;
+  padding-right: 2%;
+}
+/* =================================
+left and right part of playlist song
+========================================= */
+.left > div:nth-child(2) {
+  height: 80%;
+  min-width: 50px;
+  max-width: 50px;
+  margin: 0px 12% 0px 12%;
+  position: relative;
+}
+.left > div:nth-child(2) img {
+  width: 100%;
+  height: 100%;
+}
+.left > div:nth-child(3) p {
+  color: rgb(185, 185, 185);
+}
+/*=============================
+ customizing the play button 
+ =============================*/
+.play-btn {
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  opacity: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.1s;
+}
+/*=====================
+ on hover effects 
+ =========================*/
+.play-btn:hover {
+  opacity: 0.7;
+}
+/*===========================
+ adjusting fonts in the playlist items  
+ =============================*/
+.left div p {
+  font-size: 14px;
+}
+.center {
+  font-size: 12px;
+  color: rgb(185, 185, 185);
+}
+.right {
+  color: rgb(185, 185, 185);
+}
+.right div:nth-child(2) {
+  margin-left: 27%;
+}
+
+/*==========================================
+       Menu button property 
+ ==========================================*/
+label {
+  display: none;
+  position: absolute;
+  right: 0%;
+  top: 20%;
+  padding-bottom: 5px;
+  z-index: 3;
+  box-shadow: 0px 0px 2px 1px rgb(216, 196, 196);
+  width: 70px;
+  font-size: 20px;
+  height: 21px;
+  text-align: center;
+  background-image: linear-gradient(cyan, purple);
+}
+/*=============================
+ on a normal display, it will be hidden 
+ =================================*/
+label ~ input {
+  display: none;
+}
+/* ASIDE SECTION -2 */
+/* ================================
+this is the first section heading of the aside section 2
+=================================== */
+.section-heading {
+  margin-top: 10px;
+  position: relative;
+  margin-bottom: 12px;
+}
+/* ===========================
+adjusting for side by side display
+============================== */
+.section-heading div,
+.section-heading h1 {
+  display: inline-block;
+}
+.section-heading h1 {
+  font-size: 23px;
+}
+.section-heading div {
+  position: absolute;
+  bottom: 0%;
+  right: 0px;
+  font-size: 14px;
+}
+
+.list {
+  height: 36vh;
+  overflow: scroll;
+}
+/*============================
+ hiding the scrollbar 
+ =============================*/
+.list::-webkit-scrollbar {
+  display: none;
+}
+/*=============================
+ this is particular item in the "list  container
+ ==============================*/
+.list-item {
+  width: 100%;
+  height: 100px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 12px;
+}
+/*==================================
+ hovering effect for the list item 
+ ===================================*/
+.list-item:hover {
+  background-color: var(--playlist-items-background-color-on-hover);
+}
+/*====================================
+ all list item 
+ =====================================*/
+.list-item > div:nth-child(1) {
+  width: 100px;
+  height: 100%;
+  position: relative;
+}
+.list-item > div:nth-child(1) > img {
+  width: 100%;
+  height: 100%;
+}
+.author-name {
+  font-size: 12px;
+  color: rgb(185, 185, 185);
+}
+.extra {
+  text-align: right;
+  height: 100%;
+}
+
+/*=============================================
+ Footer section starts here
+ ==========================================*/
+
+footer {
+  position: absolute;
+  bottom: 1px;
+  width: 100%;
+  height: 60px;
+  background-color: #111110;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: nowrap;
+  padding: 0px 3%;
+  box-sizing: border-box;
+  z-index: 6;
+}
+.active-song-description {
+  height: 90%;
+  width: 25%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+/*=========================================
+ the current song which is being played 
+ ==========================================*/
+#song-image {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+#song-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.heart-and-ban-icon {
+  height: 100%;
+  padding-top: 4%;
+}
+.heart {
+  animation-name: ban;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 2.5s;
+}
+@keyframes ban {
+  0% {
+    color: rgb(179, 6, 6);
+  }
+  100% {
+    color: rgb(16, 117, 6);
+  }
+}
+/* icon ban style */
+.ban {
+  animation-name: ban;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1s;
+}
+
+.song-desc {
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+.song-desc div:nth-child(1) {
+  font-size: 14px;
+}
+
+.song-desc div:nth-child(2) {
+  font-size: 12px;
+}
+
+/*================================
+ 2. Second part of the footer
+ =================================*/
+.player {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+/* ===============================
+all control icon
+================================ */
+.controls {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+/*================================
+range input song-duration slider 
+==================================*/
+#slider {
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.time {
+  margin: 0px 10px;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  width: 100%;
+  height: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.5;
+  -webkit-transition: 0.2s;
+}
+
+/* hover effect add  */
+.slider:hover {
+  opacity: 1;
+}
+
+/*default styling of the long-slider */
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+}
+/*=============================================
+ music play animation 
+ ============================================*/
+.musics {
+  animation-name: popup;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 1s;
+}
+/*=================================
+Extra icon use rigth bottom corner
+================================== */
+.extras {
+  width: 20%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
